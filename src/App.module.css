@@ -1,0 +1,149 @@
+*{
+    box-sizing: border-box; 
+}
+
+.main {
+    padding-bottom: 50px;
+}
+
+body {
+    font-family:  Arial, Helvetica, sans-serif;
+}
+
+.headerContainer {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.container{
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    
+}
+
+.container .leftside{
+    flex: 1;
+    margin-right: 40px;
+
+}
+
+    .container .leftside h1{
+        margin: 0;
+        font-size: 40;
+        color: #3A4B5C;
+
+    }
+
+    .container .leftside p{
+        font-size: 16px;
+        margin-bottom: 40px;
+        color: #6A7D8B;
+
+    }
+
+    .container .leftside input{
+        width:100%;
+        border: 0;
+        border-bottom: 2px solid rgba(150,163,171,.5);
+        padding: 10px 2px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        outline: 0;
+    }
+
+    .container .leftside button{
+        background-color: #227c9d;
+        color: white;
+        font-size: 15px;
+        border-radius: 10px;
+        border: 0;
+        cursor: pointer;
+        width: 100%;
+        padding: 15px 0;
+        margin-top: 40px;
+        transition:  all ease .7s;
+    }
+
+    .container .leftside button:hover{
+        opacity: 0.4;
+    }
+
+    .container .leftside input:disabled{
+        opacity: .5;
+    }
+
+    .container .leftside button:disabled{
+        opacity: .5;
+    }
+
+
+
+
+.container .rightside{
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+
+    .container .rightside .grid{
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+    }
+
+    .container .rightside .rightBig {
+        flex: 1;
+        display: flex;
+    }
+
+
+    .container .rightside .rightArrow {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background-color: #227c9d;
+        margin-left: -40px;
+        margin-top: 180px;
+        transition:  all ease .3s;
+    }
+
+    .container .rightside .rightArrow:hover{
+        opacity: .8;
+    }
+
+    @media (max-width:770px) {
+        header{
+            padding: 0 20px;
+        }
+        .container {
+            padding: 0 20px;
+            flex-direction: column;
+        }
+        .container .leftside{
+            margin-right: 0;
+        }
+
+        .container .rightside {
+            margin-left: 0;
+            margin-top: 50px ;
+        }
+        .container .rightside .rightArrow {
+            margin-left: 0;
+            margin-top: 0;
+            border-radius: 10px;
+        }
+
+       
+    }
+     @media (max-width: 430px) {
+        .container .rightside .grid{
+                grid-template-columns: 1fr;
+        }
+    }
